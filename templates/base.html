@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es-mex">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Pokémon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+       
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-warning mt-3" role="alert">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+    
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>

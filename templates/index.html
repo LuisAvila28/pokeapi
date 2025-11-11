@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-center mt-5">Buscador de Pokémon</h1>
+    <form action="{{ url_for('buscar_pokemon') }}" method="post" class="d-flex justify-content-center mt-4">
+        <input type="text" name="pokemon_name" class="form-control" placeholder="Ingresa el nombre o ID de un Pokémon" required>
+        <button type="submit" class="btn btn-primary ms-2">Buscar</button>
+    </form>
+{% endblock %}
